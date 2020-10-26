@@ -1,6 +1,6 @@
 # idaproject test
 
-[Демо](https://smyk-o.github.io/svelte_test/)
+[Демо](https://smyk-o.github.io/idaproject_test/)
 
 
 
