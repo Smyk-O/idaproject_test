@@ -39,7 +39,8 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  routes
+  routes,
+  base: '/idaproject_test/'
 })
 
 export default router
