@@ -46,6 +46,7 @@
 .mamber_profession {
   font-size: 12px;
   line-height: 148%;
+  color: #677B8F;
 }
 
 .lot_team__text {
