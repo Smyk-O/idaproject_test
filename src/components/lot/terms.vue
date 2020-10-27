@@ -22,6 +22,7 @@
 .lot_rent__terms {
   list-style: none;
   padding: 0 0 50px 25px;
+  color: #677B8F;
 }
 
 .term {
