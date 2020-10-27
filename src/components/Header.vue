@@ -1,30 +1,41 @@
 <template>
-<header id="header" class="fl">
-  <div class="header_inform fl">
-    <router-link class="header_inform__logo" to="/"><img src="@/assets/header/logo.png" alt="logo"></router-link>
-    <div class="header_inform__slogan">World's first affordable airsharing</div>
-  </div>
-  <div class="header_ui fl">
-    <button class="theme_switch fl"><img src="@/assets/header/night.png" alt=""><span>Night mod</span></button>
-    <div class="header_profile_actions fl">
-      <button class="header_profile_actions_message"><img src="@/assets/header/message.png" alt=""></button>
-      <button class="header_profile_actions_notification"><img src="@/assets/header/notification.png" alt=""></button>
+  <header id="header" :class="$style.header" class="fl">
+    <div :class="$style.header_inform" class="fl">
+      <router-link :class="$style.header_inform__logo" to="/"
+        ><img src="@/assets/header/logo.png" alt="logo"
+      /></router-link>
+      <div :class="$style.header_inform__slogan">
+        World's first affordable airsharing
+      </div>
     </div>
-    <div class="header_profile fl">
-      <div class="header_profile__name">Bessie Cooper</div>
-      <div class="header_profile__img"><img src="@/assets/header/user_photo.png" alt=""></div>
+    <div :class="$style.header_ui" class="fl">
+      <button :class="$style.theme_switch" class="fl">
+        <img src="@/assets/header/night.png" alt="" /><span>Night mod</span>
+      </button>
+      <div :class="$style.header_profile_actions" class="fl">
+        <button :class="$style.header_profile_actions_message">
+          <img src="@/assets/header/message.png" alt="" />
+        </button>
+        <button :class="$style.header_profile_actions_notification">
+          <img src="@/assets/header/notification.png" alt="" />
+        </button>
+      </div>
+      <div :class="$style.header_profile" class="fl">
+        <div :class="$style.header_profile__name">Bessie Cooper</div>
+        <div :class="$style.header_profile__img">
+          <img src="@/assets/header/user_photo.png" alt="" />
+        </div>
+      </div>
     </div>
-  </div>
-
-</header>
+  </header>
 </template>
 
-<style>
+<style module>
 /*
 ** Header
 */
 
-#header {
+.header {
   justify-content: space-between;
   height: 56px;
   width: 100%;
@@ -32,18 +43,18 @@
 }
 
 @media screen and (max-width: 640px) {
-  #header {
+  .header {
     align-items: center;
     padding: 0 15px;
     box-sizing: border-box;
     margin-bottom: 8px;
   }
 
-  #header button {
+  .header button {
     height: 22px;
   }
 
-  #header button img {
+  .header button img {
     height: 100%;
   }
 }
@@ -120,7 +131,7 @@
   left: 21px;
 }
 
-.header_profile_actions>button {
+.header_profile_actions > button {
   margin: 6px;
 }
 
@@ -131,7 +142,7 @@
 }
 
 @media screen and (max-width: 640px) {
-  .header_profile_actions>button {
+  .header_profile_actions > button {
     margin: 2px;
   }
 }
@@ -173,10 +184,11 @@
 /*
 ** Header end
 */
+
 </style>
 
 <script>
 export default {
   name: "Header",
-}
+};
 </script>

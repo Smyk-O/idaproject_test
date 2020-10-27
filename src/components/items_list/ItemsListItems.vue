@@ -1,15 +1,15 @@
 <template>
-<div class="items_wrap fl" v-if="allItems.length > 0">
-  <router-link class="items_list__item fl" v-for="item in allItems" v-bind:key="item.id" v-bind:to="'/lot/' + item.name + '/'">
-    <div class="item_img">
+<div :class="$style.items_wrap" class="fl" v-if="allItems.length > 0">
+  <router-link :class="$style.items_list__item" class="fl" v-for="item in allItems" v-bind:key="item.id" v-bind:to="'/lot/' + item.name + '/'">
+    <div :class="$style.item_img">
       <img :src="item.preview" alt="" loading="lazy" />
     </div>
-    <div class="item_inform">
-      <h2 class="item_name">{{ item.name }}</h2>
-      <p class="item_description">
+    <div :class="$style.item_inform">
+      <h2 :class="$style.item_name">{{ item.name }}</h2>
+      <p :class="$style.item_description">
         {{ item.description }}
       </p>
-      <div class="item_rent_price">
+      <div :class="$style.item_rent_price">
         {{ item.rent.toLocaleString("ru-RU") }} $/h
       </div>
     </div>
@@ -17,7 +17,7 @@
 </div>
 </template>
 
-<style>
+<style module>
 /* Items list - item */
 
 .items_wrap {

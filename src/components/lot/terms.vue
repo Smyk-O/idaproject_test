@@ -1,10 +1,10 @@
 <template>
-<div class="lot_option_select">
+<div :class="$style.lot_option_select">
   <p class="lot__description lot_text">{{ selectedItem.term_text }}</p>
-  <div class="lot_terms">
+  <div :class="$style.lot_terms">
     <h2>Additional conditions:</h2>
-    <ul class="lot_rent__terms lot_text">
-      <li v-for="condition in conditions" :key="condition.id" class="term">
+    <ul :class="$style.lot_rent__terms" class="lot_text">
+      <li v-for="condition in conditions" :key="condition.id" :class="$style.term">
         {{ condition.text }}
       </li>
     </ul>
@@ -12,7 +12,7 @@
 </div>
 </template>
 
-<style>
+<style module>
 .lot_terms h2 {
   font-size: 16px;
   margin: -3px 0 30px;

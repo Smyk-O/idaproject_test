@@ -1,10 +1,10 @@
 <template>
-<div class="item_list_header fl">
-  <div class="item_list_header__rent select_non">
+<div :class="$style.item_list_header" class="fl">
+  <div :class="[$style.item_list_header__rent, $style.select_non]">
     Rent
     <span>
       {{ selectFilterOption }}
-      <SVGArrow class="arrow_ico" />
+      <SVGArrow :class="$style.arrow_ico" />
       <select @change="selectSearchOption($event.target.value)">
         <option v-for="option in filterOptions" v-bind:key="option" v-bind:value="option">
           {{ option }}
@@ -12,16 +12,16 @@
       </select>
     </span>
   </div>
-  <div class="item_list_header__add_new">
+  <div :class="$style.item_list_header__add_new">
     <button>
       Add new
-      <SVGPlus class="plus_ico" />
+      <SVGPlus :class="$style.plus_ico" />
     </button>
   </div>
 </div>
 </template>
 
-<style>
+<style module>
 
 /* Items list - header */
 

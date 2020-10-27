@@ -1,25 +1,25 @@
 <template>
-<div class="lot_option_select">
+<div :class="$style.lot_option_select">
   <p class="lot__description lot_text">{{ selectedItem.team_text }}</p>
-  <div class="lot_team">
+  <div :class="$style.lot_team">
     <h2>Qualified specialists</h2>
-    <div class="lot_team__members fl">
-      <div class="member" v-for="member in members" :key="member.id">
-        <img class="member_phote" :src="member.photo" alt="" />
-        <h3 class="member_name">
+    <div :class="$style.lot_team__members" class="fl">
+      <div :class="$style.member" v-for="member in members" :key="member.id">
+        <img :class="$style.member_phote" :src="member.photo" alt="" />
+        <h3 :class="$style.member_name">
           {{ member.name }}
         </h3>
-        <h4 class="mamber_profession">
+        <h4 :class="$style.mamber_profession">
           {{ member.profession }}
         </h4>
       </div>
     </div>
-    <p class="lot_text lot_team__text">{{ member_text }}</p>
+    <p :class="$style.lot_team__text" class="lot_text">{{ member_text }}</p>
   </div>
 </div>
 </template>
 
-<style>
+<style module>
 .lot_team__members {
   align-items: flex-start;
   flex-wrap: wrap;
