@@ -31,7 +31,9 @@
       <div class="lot_rent fl">
         <div>
           Rent for
-          <span class="price">{{ selectedItem.rent.toLocaleString("ru-RU") }} $/h</span>
+          <span class="price"
+            >{{ selectedItem.rent.toLocaleString("ru-RU") }} $/h</span
+          >
         </div>
         <button class="btn">Rent now</button>
       </div>
@@ -102,10 +104,10 @@ h2 {
 .lot_text {
   font-size: 14px;
   line-height: 146%;
+  color: #677b8f;
 }
 
 .lot__description {
-  color: #677b8f;
   margin: 31px 0px 32px;
   letter-spacing: -0.01px;
   white-space: pre-wrap;
